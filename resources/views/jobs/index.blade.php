@@ -1,6 +1,7 @@
 @extends("components.layout")
 
 @section("body")
+
     <div class="space-y-8">
 
         <section class="text-center pt-6">
@@ -13,35 +14,24 @@
 
         </section>
 
-        <section class="pt-10">
-            <x-section-heading>Featured Jobs</x-section-heading>
 
-            <div class="grid lg:grid-cols-3 gap-8 mt-6">
-                <x-job-card/>
-                <x-job-card/>
-                <x-job-card/>
-            </div>
-        </section>
+{{--        <section class="pt-10">--}}
+{{--            <x-section-heading>Featured Jobs</x-section-heading>--}}
+
+{{--            <div class="grid lg:grid-cols-3 gap-8 mt-6">--}}
+{{--                <x-job-card/>--}}
+{{--                <x-job-card/>--}}
+{{--                <x-job-card/>--}}
+{{--            </div>--}}
+{{--        </section>--}}
 
         <section>
             <x-section-heading>Tag</x-section-heading>
 
             <div class="mt-6">
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
-                <x-tag>tag</x-tag>
+                @foreach($tags as $tag)
+                    <x-tag :$tag />
+                @endforeach
             </div>
 
         </section>
