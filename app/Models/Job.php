@@ -13,6 +13,13 @@ class Job extends Model
 
     protected $guarded = [];
 
+    public function tag(string $name): void
+    {
+        $tag = Tag::firstOrCreate(["name" => $name]);
+
+        $this->tags()->attach($tag);
+    }
+
     public function tags(): belongsToMany
     {
         return $this->belongsToMany(Tag::class);
