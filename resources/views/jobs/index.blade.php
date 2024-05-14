@@ -1,8 +1,4 @@
-@extends("components.layout")
-
-@section("body")
-
-
+<x-layout>
     <div class="space-y-8">
 
         <section class="text-center pt-6">
@@ -48,10 +44,8 @@
 
         </section>
 
-
-
     </div>
 
+</x-layout>
 
 
-@endsection
