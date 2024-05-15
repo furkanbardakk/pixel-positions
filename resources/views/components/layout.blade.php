@@ -27,9 +27,19 @@
                 <a href="">Companies</a>
             </div>
 
-            <div>
-                <a href="">Post a Job</a>
-            </div>
+            @auth()
+                <div>
+                    <a href="/jobs/create">Post a Job</a>
+                </div>
+            @endauth
+
+            @guest
+                <div class="space-x-6 font-bold" >
+                    <a href="/register">Sign Up</a>
+                    <a href="/login">Log In</a>
+                </div>
+
+            @endguest
 
         </nav>
 
