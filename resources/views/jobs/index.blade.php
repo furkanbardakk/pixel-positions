@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="space-y-8">
+    <div class="space-y-8 mb-8">
 
         <section class="text-center pt-6">
 
